@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenido</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("{% static 'fondo.jpg' %}");
+      background-size: cover;
+      margin: 0;
+    }
+
+    .welcome-message {
+      background-color: #7EE746;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .welcome-message h2 {
+      margin-bottom: 20px;
+    }
+
+    .welcome-message p {
+      margin-bottom: 10px;
+    }
+
+    .welcome-message a {
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-message">
+    <h2>Bienvenido</h2>
+    <p>¡Hola, {{ request.user.username }}!</p>
+    <p>Gracias por iniciar sesión.</p>
+  </div>
+</body>
+</html>
